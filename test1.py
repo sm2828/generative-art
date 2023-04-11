@@ -32,4 +32,4 @@ for i in range(number_of_squares):
         )
     )
 
-image.save(f'./output/{run_id}.png')
+image.save(f'{run_id}.png')
