@@ -7,16 +7,25 @@ run_id = uuid.uuid1()
 
 print(f'Processing run_id: {run_id}')
 
-# Define a list of colors to choose from
+# Define a list of colors inspired by "The Starry Night" painting by Vincent van Gogh
 colors = [
-    (230, 220, 218),   # 
-    (185, 85, 110),   # light blue
-    (22, 22, 20),  # Red
-    (72, 68, 132),  # Red
-
+    (80, 150, 36),   # dark green
+    (80, 150, 36),   # dark green
+    (80, 150, 36),   # dark green
+    (80, 150, 36),   # dark green
+    (80, 150, 36),   # dark green
+    (32, 103, 44),   # deep green
+    (32, 103, 44),   # deep green
+    (32, 103, 44),   # deep green
+    (32, 103, 44),   # deep green
+    (31, 84, 144),  # dark blue
+    (28, 30, 133),  # deep blue
+    (28, 30, 133),  # deep blue
+    (28, 30, 133),  # deep blue
+    (238, 0, 0),  # red
 ]
 
-image = Image.new('RGB', (1500, 500), (190, 201, 185))
+image = Image.new('RGB', (3840, 2160), (0, 0, 0))
 width, height = image.size
 
 rectangle_width = 5
