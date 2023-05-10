@@ -9,27 +9,24 @@ print(f'Processing run_id: {run_id}')
 
 # Define a list of colors inspired by "The Starry Night" painting by Vincent van Gogh
 colors = [
-    (80, 150, 36),   # dark green
-    (80, 150, 36),   # dark green
-    (80, 150, 36),   # dark green
-    (80, 150, 36),   # dark green
-    (80, 150, 36),   # dark green
-    (32, 103, 44),   # deep green
-    (32, 103, 44),   # deep green
-    (32, 103, 44),   # deep green
-    (32, 103, 44),   # deep green
-    (31, 84, 144),  # dark blue
-    (28, 30, 133),  # deep blue
-    (28, 30, 133),  # deep blue
-    (28, 30, 133),  # deep blue
-    (238, 0, 0),  # red
+    (85, 171, 122),   # green
+    (220, 105, 110),   #  red
+    (220, 105, 110),   #  red
+    (220, 105, 110),   #  red
+    (220, 105, 110),   #  red
+    (220, 105, 110),   #  red
+    (220, 105, 110),   #  red
+    (220, 105, 110),   #  red
+    (220, 105, 110),   #  red
+    (220, 105, 110),   #  red
+    (220, 105, 110),   #  red
 ]
 
 image = Image.new('RGB', (3840, 2160), (0, 0, 0))
 width, height = image.size
 
 rectangle_width = 5
-rectangle_height = 100
+rectangle_height = 200
 
 number_of_squares = random.randint(1, 1000)
 
