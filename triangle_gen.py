@@ -10,16 +10,6 @@ print(f'Processing run_id: {run_id}')
 colors = [
     (85, 171, 122),   # green
     (220, 105, 110),   #  red
-    (220, 105, 110),   #  red
-    (220, 105, 110),   #  red
-    (220, 105, 110),   #  red
-    (220, 105, 110),   #  red
-    (220, 105, 110),   #  red
-    (220, 105, 110),   #  red
-    (220, 105, 110),   #  red
-    (220, 105, 110),   #  red
-    (220, 105, 110),   #  red
-
 ]
 
 image = Image.new('RGB', (3840, 2160), (0, 0, 0))
@@ -31,9 +21,9 @@ draw_image = ImageDraw.Draw(image)
 
 for i in range(number_of_triangles):
     # Define the coordinates of the triangle vertices
-    x1 = random.randint(0, width)
-    x2 = random.randint(0, width)
-    x3 = random.randint(0, width)
+    x1 = random.randint(0, width/2)
+    x2 = random.randint(0, width/2)
+    x3 = random.randint(0, width/2)
 
     y1 = random.randint(0, height)
     y2 = random.randint(0, height)
