@@ -8,17 +8,16 @@ run_id = uuid.uuid1()
 print(f'Processing run_id: {run_id}')
 
 colors = [
-    (228, 87, 46),   # orange-red
-    (243, 206, 77),   # yellow
-    (118, 165, 175),   # blue-gray
-    (132, 170, 101),   # green-gray
-    (187, 81, 54),   # red-brown
+    (163, 255, 160),   # light green
+    (129, 199, 251),   # light blue
+    (255, 96, 75),  # Red
+    (255, 255, 79),  # Red
 ]
 
 image = Image.new('RGB', (3840, 2160), (0, 0, 0))
 width, height = image.size
 
-number_of_triangles = 200
+number_of_triangles = 2
 
 draw_image = ImageDraw.Draw(image)
 
