@@ -7,7 +7,6 @@ run_id = uuid.uuid1()
 
 print(f'Processing run_id: {run_id}')
 
-# Define a list of colors inspired by "Degen Coin Flip" colors
 colors = [
     (238, 223, 167),   # Light beige
     (186, 213, 208),   # Light blue
@@ -16,10 +15,10 @@ colors = [
     (28, 20, 13),  # Dark brown
 ]
 
-image = Image.new('RGB', (3840, 2160), (0, 0, 0))
+image = Image.new('RGB', (3840, 2160), (255, 255, 255))
 width, height = image.size
 
-circle_diameter = 100
+circle_diameter = 50
 
 number_of_circles = random.randint(1, 1000)
 
