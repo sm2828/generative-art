@@ -10,8 +10,8 @@ print(f'Processing run_id: {run_id}')
 pygame.init()
 
 # Window dimensions
-WIDTH = 1400
-HEIGHT = 800
+WIDTH = 300
+HEIGHT = 400
 
 # Colors
 LIGHT_BEIGE = (238, 223, 167)
@@ -19,19 +19,21 @@ LIGHT_BLUE = (186, 213, 208)
 DARK_BLUE = (94, 133, 160)
 NAVY_BLUE = (24, 44, 97)
 DARK_BROWN = (28, 20, 13)
+GREEN = (85, 171, 122)
+RED = (220, 105, 110)
 
 # Color options
-colors = [LIGHT_BEIGE, LIGHT_BLUE, DARK_BLUE, NAVY_BLUE, DARK_BROWN]
+colors = [LIGHT_BEIGE, LIGHT_BLUE, DARK_BLUE, NAVY_BLUE, DARK_BROWN, GREEN, RED]
 
 # Circle parameters
-circle_radius = 25
+circle_radius = 40
 
 # Number of circles
-number_of_circles = 30
+number_of_circles = 10
 
 # Create the window
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption("Interactive Generative Art")
+pygame.display.set_caption("circle_???")
 
 # Clock object to control frame rate
 clock = pygame.time.Clock()
@@ -98,7 +100,7 @@ while running:
                     ball.velocity[1] += random.uniform(-3, 3)
 
     # Clear the screen
-    screen.fill((255, 255, 255))
+    screen.fill((245, 245, 220))
 
     # Update ball positions and apply gravity
     for ball in balls:
