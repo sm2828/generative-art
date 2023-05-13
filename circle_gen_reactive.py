@@ -10,8 +10,8 @@ print(f'Processing run_id: {run_id}')
 pygame.init()
 
 # Window dimensions
-WIDTH = 300
-HEIGHT = 400
+WIDTH = 1000
+HEIGHT = 300
 
 # Colors
 LIGHT_BEIGE = (238, 223, 167)
@@ -26,10 +26,10 @@ RED = (220, 105, 110)
 colors = [LIGHT_BEIGE, LIGHT_BLUE, DARK_BLUE, NAVY_BLUE, DARK_BROWN, GREEN, RED]
 
 # Circle parameters
-circle_radius = 40
+circle_radius = 60
 
 # Number of circles
-number_of_circles = 10
+number_of_circles = 14
 
 # Create the window
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
