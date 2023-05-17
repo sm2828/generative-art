@@ -11,7 +11,7 @@ pygame.init()
 
 # Window dimensions
 WIDTH = 1000
-HEIGHT = 300
+HEIGHT = 800
 
 # Colors
 LIGHT_BEIGE = (238, 223, 167)
@@ -26,10 +26,10 @@ RED = (220, 105, 110)
 colors = [LIGHT_BEIGE, LIGHT_BLUE, DARK_BLUE, NAVY_BLUE, DARK_BROWN, GREEN, RED]
 
 # Circle parameters
-circle_radius = 60
+circle_radius = 80
 
 # Number of circles
-number_of_circles = 14
+number_of_circles = 8
 
 # Create the window
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
@@ -53,7 +53,7 @@ class Ball:
 
     def apply_gravity(self):
         # Apply downward force (gravity)
-        self.velocity[1] += 1
+        self.velocity[1] += .69
 
     def apply_friction(self):
         # Apply friction to reduce horizontal velocity
@@ -95,9 +95,9 @@ def handle_events():
             # Check for collision with the cursor
             for ball in balls:
                 if ball.check_collision(pygame.mouse.get_pos()):
-                    # Apply a reaction to the ball
-                    ball.velocity[0] += random.uniform(-3, 3)
-                    ball.velocity[1] += random.uniform(-3, 3)
+                    # Apply a stronger reaction to the ball
+                    ball.velocity[0] += random.uniform(-8, 8)
+                    ball.velocity[1] += random.uniform(-8, 8)
 
 
 # Function to update ball positions
