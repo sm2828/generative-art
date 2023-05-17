@@ -83,13 +83,13 @@ for _ in range(number_of_circles):
     ball = Ball(circle_x, circle_y, circle_radius, color)
     balls.append(ball)
 
-# Game loop
-running = True
-while running:
-    # Event handling
+
+# Function to handle events
+def handle_events():
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
-            running = False
+            pygame.quit()
+            quit()
 
         if event.type == pygame.MOUSEMOTION:
             # Check for collision with the cursor
@@ -99,10 +99,9 @@ while running:
                     ball.velocity[0] += random.uniform(-3, 3)
                     ball.velocity[1] += random.uniform(-3, 3)
 
-    # Clear the screen
-    screen.fill((245, 245, 220))
 
-    # Update ball positions and apply gravity
+# Function to update ball positions
+def update_positions():
     for ball in balls:
         ball.update()
         ball.apply_gravity()
@@ -115,14 +114,20 @@ while running:
         if ball.y - ball.radius < 0 or ball.y + ball.radius > HEIGHT:
             ball.velocity[1] *= -0.9  # Adjust the coefficient of restitution here
 
-        # Draw the ball
-        ball.draw(screen)
 
-    # Refresh the display
+# Function to draw on the screen
+def draw_screen():
+    screen.fill((245, 245, 220))
+    for ball in balls:
+        ball.draw(screen)
     pygame.display.flip()
 
-    # Control the frame rate
+
+# Game loop
+running = True
+while running:
+    handle_events()
+    update_positions()
+    draw_screen()
     clock.tick(60)
 
-# Quit the game
-pygame.quit()
