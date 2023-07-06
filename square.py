@@ -15,12 +15,17 @@ image = Image.new("RGB", (width, height), "black")
 draw = ImageDraw.Draw(image)
 
 # Generate random color palette with nighttime colors
-colors = []
-for _ in range(10):
-    r = random.randint(0, 30)
-    g = random.randint(0, 30)
-    b = random.randint(50, 255)
-    colors.append((r, g, b))
+colors = [
+    (255, 40, 40, 200),    # Red
+    (255, 150, 40, 200),   # Orange
+    (255, 255, 40, 200),   # Yellow
+    (0, 255, 0, 200),      # Lime Green
+    (40, 200, 255, 200),   # Light Blue
+    (150, 40, 255, 200),   # Purple
+    (255, 40, 150, 200),   # Pink
+    (255, 255, 255, 200),  # White
+]
+
 
 # Draw random rectangles with different colors
 for _ in range(1000):

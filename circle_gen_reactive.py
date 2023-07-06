@@ -46,6 +46,7 @@ class Ball:
         self.radius = radius
         self.color = color
         self.velocity = [0, 0]  # Initial velocity
+        self.collided = False  # Flag to indicate collision
 
     def update(self):
         self.x += self.velocity[0]
@@ -66,7 +67,11 @@ class Ball:
         return distance < self.radius
 
     def draw(self, screen):
-        pygame.draw.circle(screen, self.color, (int(self.x), int(self.y)), self.radius)
+        if self.collided:
+            # Draw a larger circle with a brighter color when collided
+            pygame.draw.circle(screen, self.color, (int(self.x), int(self.y)), self.radius + 10)
+        else:
+            pygame.draw.circle(screen, self.color, (int(self.x), int(self.y)), self.radius)
 
 
 # List to store the balls
@@ -98,9 +103,12 @@ def handle_events():
                     # Apply a stronger reaction to the ball
                     ball.velocity[0] += random.uniform(-8, 8)
                     ball.velocity[1] += random.uniform(-8, 8)
+                    ball.collided = True
+                else:
+                    ball.collided = False
 
 
-# Function to update ball positions
+# Function to updatethe ball positions
 def update_positions():
     for ball in balls:
         ball.update()
@@ -130,4 +138,3 @@ while running:
     update_positions()
     draw_screen()
     clock.tick(60)
-
